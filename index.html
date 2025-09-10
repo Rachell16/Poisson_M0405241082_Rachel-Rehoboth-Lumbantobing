@@ -4,9 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Rachel! 🌸</title>
+    <title> hai i'm rachel 🌸</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main-color {
+            background-color: #a56b73;
+        }
+
+        .main-color-light {
+            background-color: #bb838b;
+        }
+
+        .main-color-dark {
+            background-color: #5e343b;
+        }
+
+        .text-main {
+            color: #a0777d;
+        }
+
+        .border-main {
+            border-color: #a0777d;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #792230 0%, #92696f 50%, #dcb1b5 100%);
+        }
+
+        .bounce-slow {
+            animation: bounce-slow 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .wiggle {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: 0 20px 40px rgba(160, 119, 125, 0.3);
+        }
+
+        .typing {
+            border-right: 2px solid #a0777d;
+            animation: typing 3s steps(20) infinite, blink 1s infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                border-color: #a0777d;
+            }
+
+            51%,
+            100% {
+                border-color: transparent;
+            }
+        }
+
+        .float-emoji {
+            animation: float-emoji 4s ease-in-out infinite;
+        }
+
+        @keyframes float-emoji {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+
+            66% {
+                transform: translateY(-5px) rotate(-3deg);
+            }
+        }
+
+        .pulse-heart {
+            animation: pulse-heart 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-heart {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
 </head>
 
 <body class="gradient-bg min-h-screen overflow-x-hidden">
@@ -216,7 +359,58 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Add interactive click effects
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('click', function () {
+                this.style.transform = 'scale(0.95) rotate(0deg)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Add sparkle effect on mouse move
+        document.addEventListener('mousemove', function (e) {
+            if (Math.random() > 0.95) {
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1000';
+            sparkle.style.fontSize = '12px';
+            sparkle.style.animation = 'sparkle-fade 1s ease-out forwards';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+
+        // Add sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle-fade {
+                0% { opacity: 1; transform: scale(0) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+                100% { opacity: 0; transform: scale(0) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add cute loading message
+        window.addEventListener('load', function () {
+            console.log('🌸 Welcome to Rachel\'s page! 🌸');
+        });
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'97cb82e15533aa81',t:'MTc1NzQ3MTUwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 
 </html>
