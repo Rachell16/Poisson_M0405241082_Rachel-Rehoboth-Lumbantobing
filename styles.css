@@ -1,0 +1,142 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ body {
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .main-color {
+     background-color: #a0777d;
+ }
+
+ .main-color-light {
+     background-color: #b8898f;
+ }
+
+ .main-color-dark {
+     background-color: #8a656b;
+ }
+
+ .text-main {
+     color: #a0777d;
+ }
+
+ .border-main {
+     border-color: #a0777d;
+ }
+
+ .gradient-bg {
+     background: linear-gradient(135deg, #a0777d 0%, #d4a5ab 50%, #f0d4d7 100%);
+ }
+
+ .bounce-slow {
+     animation: bounce-slow 3s ease-in-out infinite;
+ }
+
+ @keyframes bounce-slow {
+
+     0%,
+     100% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-15px);
+     }
+ }
+
+ .wiggle {
+     animation: wiggle 2s ease-in-out infinite;
+ }
+
+ @keyframes wiggle {
+
+     0%,
+     100% {
+         transform: rotate(0deg);
+     }
+
+     25% {
+         transform: rotate(-5deg);
+     }
+
+     75% {
+         transform: rotate(5deg);
+     }
+ }
+
+ .card-hover {
+     transition: all 0.3s ease;
+ }
+
+ .card-hover:hover {
+     transform: translateY(-8px) rotate(1deg);
+     box-shadow: 0 20px 40px rgba(160, 119, 125, 0.3);
+ }
+
+ .typing {
+     border-right: 2px solid #a0777d;
+     animation: typing 3s steps(20) infinite, blink 1s infinite;
+ }
+
+ @keyframes typing {
+     0% {
+         width: 0;
+     }
+
+     50% {
+         width: 100%;
+     }
+
+     100% {
+         width: 0;
+     }
+ }
+
+ @keyframes blink {
+
+     0%,
+     50% {
+         border-color: #a0777d;
+     }
+
+     51%,
+     100% {
+         border-color: transparent;
+     }
+ }
+
+ .float-emoji {
+     animation: float-emoji 4s ease-in-out infinite;
+ }
+
+ @keyframes float-emoji {
+
+     0%,
+     100% {
+         transform: translateY(0px) rotate(0deg);
+     }
+
+     33% {
+         transform: translateY(-10px) rotate(5deg);
+     }
+
+     66% {
+         transform: translateY(-5px) rotate(-3deg);
+     }
+ }
+
+ .pulse-heart {
+     animation: pulse-heart 1.5s ease-in-out infinite;
+ }
+
+ @keyframes pulse-heart {
+
+     0%,
+     100% {
+         transform: scale(1);
+     }
+
+     50% {
+         transform: scale(1.1);
+     }
+ }
